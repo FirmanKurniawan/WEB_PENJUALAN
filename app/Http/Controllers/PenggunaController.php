@@ -38,6 +38,7 @@ class PenggunaController extends Controller
         $admin = new \App\User();
         $admin->name = $r->input('name');
         $admin->email = $r->input('email');
+        $admin->status = 2;
         $admin->password = bcrypt($r->input('password'));
         $admin->save();
 
