@@ -55,16 +55,16 @@ class PenggunaController extends Controller
 
     public function delete_distributor($id)
     {
-        $admin = \App\Distributor::find($id);
-        $admin->delete();
+        $distributor = \App\Distributor::find($id);
+        $distributor->delete();
 
         return redirect()->back();
     }
 
     public function delete_petugas($id)
     {
-        $admin = \App\Petugas::find($id);
-        $admin->delete();
+        $petugas = \App\Petugas::find($id);
+        $petugas->delete();
 
         return redirect()->back();
     }

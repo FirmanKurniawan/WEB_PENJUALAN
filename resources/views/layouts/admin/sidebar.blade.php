@@ -37,9 +37,9 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="tambah_admin"><i class="fa fa-circle-o"></i> Admin</a></li>
-            <li><a href="tambah_distributor"><i class="fa fa-circle-o"></i> Distributor</a></li>
-            <li><a href="tambah_petugas"><i class="fa fa-circle-o"></i> Petugas</a></li>
+            <li><a href="/admin/tambah_admin"><i class="fa fa-circle-o"></i> Admin</a></li>
+            <li><a href="/admin/tambah_distributor"><i class="fa fa-circle-o"></i> Distributor</a></li>
+            <li><a href="/admin/tambah_petugas"><i class="fa fa-circle-o"></i> Petugas</a></li>
           </ul>
         </li>
         </li>
@@ -51,10 +51,10 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="tambah_barang"><i class="fa fa-circle-o"></i> Tambah Barang</a></li>
+            <li><a href="/admin/tambah_barang"><i class="fa fa-circle-o"></i> Tambah Barang</a></li>
             <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> Barang Masuk</a></li>
             <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Detail Barang</a></li>
-            <li><a href="tambah_jenis"><i class="fa fa-circle-o"></i> Jenis Barang</a></li>
+            <li><a href="/admin/tambah_jenis"><i class="fa fa-circle-o"></i> Jenis Barang</a></li>
           </ul>
         </li>
         <li class="treeview">
