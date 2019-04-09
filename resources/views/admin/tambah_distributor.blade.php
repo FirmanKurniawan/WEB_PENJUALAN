@@ -15,6 +15,7 @@
             <th scope="col">Kota Asal</th>
             <th scope="col">Email</th>
             <th scope="col">Telepon</th>
+            <th scope="col">Action</th>
           </tr>
         </thead>
         @php
@@ -34,6 +35,7 @@
             <td>{{$b->KotaAsal}}</td>
             <td>{{$b->Email}}</td>
             <td>{{$b->Telepon}}</td>
+            <td><a href="delete_distributor/{{$b->id}}">Hapus</a></td>
           </tr>
         </tbody>
         @endforeach

@@ -4,13 +4,14 @@
 <div class="col-md-12">
   <div class="box box-info">
     <div class="box-header with-border">
-      <h3 class="box-title">Distributor</h3>
+      <h3 class="box-title">Admin</h3>
       <table class="table table-bordered">
         <thead>
           <tr>
             <th scope="col">#</th>
             <th scope="col">Nama</th>
             <th scope="col">Email</th>
+            <th colspan="2">Action</th>
           </tr>
         </thead>
         @php
@@ -26,6 +27,7 @@
             <th scope="row">{{$i++}}</th>
             <td>{{$b->name}}</td>
             <td>{{$b->email}}</td>
+            <td><a href="delete_admin/{{$b->id}}">Hapus</a></td>
           </tr>
         </tbody>
         @endforeach

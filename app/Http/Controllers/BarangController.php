@@ -29,4 +29,20 @@ class BarangController extends Controller
 
     	return redirect()->back();
     }
+
+    public function delete_barang($id)
+    {
+        $barang = \App\Barang::find($id);
+        $barang->delete();
+
+        return redirect()->back();
+    }
+
+    public function delete_jenis($id)
+    {
+        $jenis = \App\Jenis::find($id);
+        $jenis->delete();
+
+        return redirect()->back();
+    }
 }

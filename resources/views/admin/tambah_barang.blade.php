@@ -14,6 +14,7 @@
 			      <th scope="col">Harga Net</th>
 			      <th scope="col">Harga Jual</th>
 			      <th scope="col">Stok</th>
+            <th scope="col">Action</th>
 			    </tr>
 			  </thead>
 			  @php
@@ -32,6 +33,7 @@
 			      <td>{{$b->HargaNet}}</td>
 			      <td>{{$b->HargaJual}}</td>
 			      <td>{{$b->Stok}}</td>
+            <td><a href="delete_barang/{{$b->id}}">Hapus</a></td>
 			    </tr>
 			  </tbody>
 			  @endforeach

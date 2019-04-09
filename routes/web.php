@@ -48,3 +48,9 @@ Route::post('save_jenis', 'BarangController@save_jenis');
 Route::post('save_petugas', 'PenggunaController@save_petugas');
 Route::post('save_distributor', 'PenggunaController@save_distributor');
 Route::post('save_admin', 'PenggunaController@save_admin');
+
+Route::get('delete_admin/{id}', 'PenggunaController@delete_admin');
+Route::get('delete_distributor/{id}', 'PenggunaController@delete_distributor');
+Route::get('delete_petugas/{id}', 'PenggunaController@delete_petugas');
+Route::get('delete_barang/{id}', 'BarangController@delete_barang');
+Route::get('delete_jenis/{id}', 'BarangController@delete_jenis');

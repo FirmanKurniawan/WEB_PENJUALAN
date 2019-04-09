@@ -35,11 +35,35 @@ class PenggunaController extends Controller
 
     public function save_admin(Request $r)
     {
-        $petugas = new \App\User();
-        $petugas->name = $r->input('name');
-        $petugas->email = $r->input('email');
-        $petugas->password = bcrypt($r->input('password'));
-        $petugas->save();
+        $admin = new \App\User();
+        $admin->name = $r->input('name');
+        $admin->email = $r->input('email');
+        $admin->password = bcrypt($r->input('password'));
+        $admin->save();
+
+        return redirect()->back();
+    }
+
+    public function delete_admin($id)
+    {
+        $admin = \App\User::find($id);
+        $admin->delete();
+
+        return redirect()->back();
+    }
+
+    public function delete_distributor($id)
+    {
+        $admin = \App\Distributor::find($id);
+        $admin->delete();
+
+        return redirect()->back();
+    }
+
+    public function delete_petugas($id)
+    {
+        $admin = \App\Petugas::find($id);
+        $admin->delete();
 
         return redirect()->back();
     }

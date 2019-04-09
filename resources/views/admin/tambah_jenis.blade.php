@@ -1,6 +1,41 @@
 @extends('admin.index')
 @section('isi')
 <div class="col-md-12">
+  <div class="box box-info">
+    <div class="box-header with-border">
+      <h3 class="box-title">Jenis Barang</h3>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Kode Jenis</th>
+            <th scope="col">Jenis</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        @php
+          $barang = \App\Jenis::all();
+          $i = 1;
+        @endphp
+        @foreach($barang as $b)
+        @php
+          $id_jenis = \App\Jenis::where('id', $b->KodeJenis)->value('Jenis');
+        @endphp
+        <tbody>
+          <tr>
+            <th scope="row">{{$i++}}</th>
+            <td>{{$b->KodeJenis}}</td>
+            <td>{{$b->Jenis}}</td>
+            <td><a href="delete_jenis/{{$b->id}}">Hapus</a></td>
+          </tr>
+        </tbody>
+        @endforeach
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-12">
           <!-- Horizontal Form -->
           <div class="box box-info">
             <div class="box-header with-border">
