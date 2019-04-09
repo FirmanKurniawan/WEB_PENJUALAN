@@ -19,7 +19,6 @@ class CreatePenjualansTable extends Migration
             $table->foreign('NoFaktur')->references('id')->on('penjualans');
             $table->string('TglPenjualan');
             $table->bigInteger('IDPetugas')->unsigned();
-            $table->foreign('IDPetugas')->references('IDPetugas')->on('petugas');
             $table->string('Bayar');
             $table->string('Sisa');
             $table->string('Total');

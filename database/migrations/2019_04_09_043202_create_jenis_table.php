@@ -15,8 +15,7 @@ class CreateJenisTable extends Migration
     {
         Schema::create('jenis', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('KodeJenis')->unsigned();
-            $table->foreign('KodeJenis')->references('id')->on('jenis');
+            $table->string('KodeJenis');
             $table->string('Jenis');
             $table->timestamps();
         });

@@ -21,7 +21,6 @@ class CreateBrgMasuksTable extends Migration
             $table->biginteger('IDDistributor')->unsigned();
             $table->foreign('IDDistributor')->references('id')->on('distributors');
             $table->bigInteger('IDPetugas')->unsigned();
-            $table->foreign('IDPetugas')->references('id')->on('petugas');
             $table->string('Total');
             $table->timestamps();
         });

@@ -15,8 +15,7 @@ class CreatePetugasTable extends Migration
     {
         Schema::create('petugas', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('IDPetugas')->unsigned();
-            $table->foreign('IDPetugas')->references('id')->on('petugas');
+            $table->string('IDPetugas');
             $table->string('NamaPetugas');
             $table->string('Alamat');
             $table->string('Email');

@@ -9,16 +9,15 @@
         <thead>
           <tr>
             <th scope="col">#</th>
-            <th scope="col">ID Distributor</th>
-            <th scope="col">Nama Distributor</th>
+            <th scope="col">ID Petugas</th>
+            <th scope="col">Nama Petugas</th>
             <th scope="col">Alamat</th>
-            <th scope="col">Kota Asal</th>
             <th scope="col">Email</th>
             <th scope="col">Telepon</th>
           </tr>
         </thead>
         @php
-          $barang = \App\Distributor::all();
+          $barang = \App\Petugas::all();
           $i = 1;
         @endphp
         @foreach($barang as $b)
@@ -28,10 +27,9 @@
         <tbody>
           <tr>
             <th scope="row">{{$i++}}</th>
-            <td>{{$b->IDDistributor}}</td>
-            <td>{{$b->NamaDistributor}}</td>
+            <td>{{$b->IDPetugas}}</td>
+            <td>{{$b->NamaPetugas}}</td>
             <td>{{$b->Alamat}}</td>
-            <td>{{$b->KotaAsal}}</td>
             <td>{{$b->Email}}</td>
             <td>{{$b->Telepon}}</td>
           </tr>
@@ -46,21 +44,21 @@
           <!-- Horizontal Form -->
           <div class="box box-info">
             <div class="box-header with-border">
-              <h3 class="box-title">Tambah Distributor</h3>
+              <h3 class="box-title">Tambah Petugas</h3>
             </div>
             <!-- /.box-header -->
             <!-- form start -->
             @php
               $jenis = \App\Jenis::all();
             @endphp
-            <form class="form-horizontal" method="POST" action="save_distributor">
+            <form class="form-horizontal" method="POST" action="save_petugas">
               @csrf
               <div class="box-body">
                 <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label">Nama Distributor</label>
+                  <label for="inputEmail3" class="col-sm-2 control-label">Nama Petugas</label>
 
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputEmail3" placeholder="Nama Distributor" name="NamaDistributor">
+                    <input type="text" class="form-control" id="inputEmail3" placeholder="Nama Petugas" name="NamaPetugas">
                   </div>
                 </div>
                 <div class="form-group">
@@ -68,13 +66,6 @@
 
                   <div class="col-sm-10">
                     <input type="text" class="form-control" id="inputEmail3" placeholder="Alamat" name="Alamat">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label">Kota Asal</label>
-
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputEmail3" placeholder="Kota Asal" name="KotaAsal">
                   </div>
                 </div>
                 <div class="form-group">

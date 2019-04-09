@@ -14,7 +14,7 @@ class BarangController extends Controller
     	$save->HargaNet = $r->input('HargaNet');
     	$save->HargaJual = $r->input('HargaJual');
     	$save->Stok = $r->input('Stok');
-    	$save->KodeBarang = $r->input('KodeBarang');
+    	$save->KodeBarang = str_random(5);
     	$save->save();
 
     	return redirect()->back();
@@ -24,6 +24,7 @@ class BarangController extends Controller
     {
     	$save = new \App\Jenis();
     	$save->Jenis = $r->input('Jenis');
+        $save->KodeJenis = str_random(5);
     	$save->save();
 
     	return redirect()->back();

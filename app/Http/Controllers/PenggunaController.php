@@ -22,11 +22,12 @@ class PenggunaController extends Controller
 
     public function save_petugas(Request $r)
     {
-    	$petugas = \App\Petugas();
+    	$petugas = new \App\Petugas();
         $petugas->NamaPetugas = $r->input('NamaPetugas');
+        $petugas->IDPetugas = str_random(5);
         $petugas->Alamat = $r->input('Alamat');
         $petugas->Email = $r->input('Email');
-        $petugas->Telepon = $r->input('telepon');
+        $petugas->Telepon = $r->input('Telepon');
         $petugas->save();
 
         return redirect()->back();
