@@ -32,4 +32,15 @@ class PenggunaController extends Controller
 
         return redirect()->back();
     }
+
+    public function save_admin(Request $r)
+    {
+        $petugas = new \App\User();
+        $petugas->name = $r->input('name');
+        $petugas->email = $r->input('email');
+        $petugas->password = bcrypt($r->input('password'));
+        $petugas->save();
+
+        return redirect()->back();
+    }
 }

@@ -35,6 +35,10 @@ Route::get('/tambah_petugas', function () {
     return view('admin.tambah_petugas');
 });
 
+Route::get('/tambah_admin', function () {
+    return view('admin.tambah_admin');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -43,3 +47,4 @@ Route::post('save_barang', 'BarangController@save_barang');
 Route::post('save_jenis', 'BarangController@save_jenis');
 Route::post('save_petugas', 'PenggunaController@save_petugas');
 Route::post('save_distributor', 'PenggunaController@save_distributor');
+Route::post('save_admin', 'PenggunaController@save_admin');

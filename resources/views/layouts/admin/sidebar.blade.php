@@ -37,7 +37,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/charts/chartjs.html"><i class="fa fa-circle-o"></i> Admin</a></li>
+            <li><a href="tambah_admin"><i class="fa fa-circle-o"></i> Admin</a></li>
             <li><a href="tambah_distributor"><i class="fa fa-circle-o"></i> Distributor</a></li>
             <li><a href="tambah_petugas"><i class="fa fa-circle-o"></i> Petugas</a></li>
           </ul>
