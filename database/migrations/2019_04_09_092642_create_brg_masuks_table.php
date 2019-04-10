@@ -15,12 +15,10 @@ class CreateBrgMasuksTable extends Migration
     {
         Schema::create('brg_masuks', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('NoNota')->unsigned();
-            $table->foreign('NoNota')->references('id')->on('brg_masuks');
+            $table->bigInteger('NoNota');
             $table->string('TglMasuk');
-            $table->biginteger('IDDistributor')->unsigned();
-            $table->foreign('IDDistributor')->references('id')->on('distributors');
-            $table->bigInteger('IDPetugas')->unsigned();
+            $table->string('IDDistributor');
+            $table->string('IDPetugas');
             $table->string('Total');
             $table->timestamps();
         });

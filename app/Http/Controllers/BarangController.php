@@ -10,7 +10,7 @@ class BarangController extends Controller
     {
     	$save = new \App\Barang();
     	$save->NamaBarang = $r->input('NamaBarang');
-    	$save->KodeJenis = $r->input('KodeJenis');
+    	$save->KodeJenis = $r->input('KodeJenis1');
     	$save->HargaNet = $r->input('HargaNet');
     	$save->HargaJual = $r->input('HargaJual');
     	$save->Stok = $r->input('Stok');
@@ -42,6 +42,19 @@ class BarangController extends Controller
     {
         $jenis = \App\Jenis::find($id);
         $jenis->delete();
+
+        return redirect()->back();
+    }
+
+    public function barang_masuk(Request $r)
+    {
+        $barang = new \App\BrgMasuk();
+        $barang->IDPetugas = $r->input('IDPetugas');
+        $barang->IDDistributor = $r->input('IDDistributor');
+        $barang->Total = $r->input('Total');
+        $barang->TglMasuk = "tes";
+        $barang->NoNota = rand(1, 100);
+        $barang->save();
 
         return redirect()->back();
     }

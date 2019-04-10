@@ -23,7 +23,7 @@
 			  @endphp
 			  @foreach($barang as $b)
 			  @php
-			  	$id_jenis = \App\Jenis::where('id', $b->KodeJenis)->value('Jenis');
+			  	$id_jenis = \App\Jenis::where('KodeJenis', $b->KodeJenis)->value('Jenis');
 			  @endphp
 			  <tbody>
 			    <tr>
@@ -66,12 +66,12 @@
                 <div class="form-group">
                   <label for="inputPassword3" class="col-sm-2 control-label">Jenis</label>
                   <div class="col-sm-10">
-                  	@foreach($jenis as $j)
-                    <select class="form-control" name="KodeJenis">
+                    <select class="form-control" name="KodeJenis1">
                     	<option readonly>Pilih Jenis</option>
-                    	<option value="{{$j->id}}">{{$j->Jenis}}</option>
+                    @foreach($jenis as $j)
+                    	<option value="{{$j->KodeJenis}}">{{$j->Jenis}}</option>
+                      @endforeach
                     </select>
-                    @endforeach
                   </div>
                 </div>
                 <div class="form-group">

@@ -238,6 +238,7 @@
 
                 <p>
                   {{Auth::user()->name}} - Web Developer
+                  <small>{{Auth::user()->email}}</small>
                   <small>Member since Nov. 2012</small>
                 </p>
               </li>

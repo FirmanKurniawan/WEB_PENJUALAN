@@ -17,8 +17,7 @@ class CreateBarangsTable extends Migration
             $table->bigIncrements('id');
             $table->string('KodeBarang');
             $table->string('NamaBarang');
-            $table->bigInteger('KodeJenis')->unsigned();
-            $table->foreign('KodeJenis')->references('id')->on('jenis');
+            $table->string('KodeJenis');
             $table->string('HargaNet');
             $table->string('HargaJual');
             $table->string('Stok');

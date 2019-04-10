@@ -65,3 +65,16 @@ Route::group(['middleware' => 'admin'], function(){
 	Route::get('delete_jenis/{id}', 'BarangController@delete_jenis');
 });
 });
+
+
+Route::get('/jual', function () {
+    return view('admin.penjualan');
+	});
+
+Route::get('/beli', function () {
+    return view('admin.pembelian');
+	});
+
+Route::get('penjualan', 'BarangController@penjualan');
+Route::get('pembelian', 'BarangController@pembelian');
+Route::post('barang_masuk', 'BarangController@barang_masuk');

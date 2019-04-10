@@ -18,7 +18,7 @@
             <div class="icon">
               <i class="ion ion-bag"></i>
             </div>
-            <a href="tambah_barang" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="/admin/tambah_barang" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -33,7 +33,7 @@
             <div class="icon">
               <i class="ion ion-stats-bars"></i>
             </div>
-            <a href="tambah_distributor" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="/admin/tambah_distributor" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -48,7 +48,7 @@
             <div class="icon">
               <i class="ion ion-person-add"></i>
             </div>
-            <a href="tambah_petugas" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="/admin/tambah_petugas" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -63,7 +63,7 @@
             <div class="icon">
               <i class="ion ion-pie-graph"></i>
             </div>
-            <a href="tambah_jenis" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="/admin/tambah_jenis" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
