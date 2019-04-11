@@ -15,9 +15,8 @@ class CreateDetailPenjualansTable extends Migration
     {
         Schema::create('detail_penjualans', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('NoFaktur')->unsigned();
-            $table->foreign('NoFaktur')->references('id')->on('penjualans');
-            $table->bigInteger('KodeBarang')->unsigned();
+            $table->string('NoFaktur');
+            $table->string('KodeBarang');
             $table->string('Jumlah');
             $table->string('Subtotal');
             $table->timestamps();

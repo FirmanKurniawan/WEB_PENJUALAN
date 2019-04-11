@@ -52,6 +52,10 @@ Route::group(['middleware' => 'admin'], function(){
     return view('admin.tambah_admin');
 	});
 
+	Route::get('/beli', function () {
+    return view('admin.pembelian');
+	});
+
 	Route::post('save_barang', 'BarangController@save_barang');
 	Route::post('save_jenis', 'BarangController@save_jenis');
 	Route::post('save_petugas', 'PenggunaController@save_petugas');
@@ -63,6 +67,8 @@ Route::group(['middleware' => 'admin'], function(){
 	Route::get('delete_petugas/{id}', 'PenggunaController@delete_petugas');
 	Route::get('delete_barang/{id}', 'BarangController@delete_barang');
 	Route::get('delete_jenis/{id}', 'BarangController@delete_jenis');
+
+	Route::post('barang_masuk', 'BarangController@barang_masuk');
 });
 });
 
@@ -71,10 +77,19 @@ Route::get('/jual', function () {
     return view('admin.penjualan');
 	});
 
-Route::get('/beli', function () {
+Route::get('/detail_barang_masuk', function () {
+    return view('admin.detail_barang_masuk');
+	});
+
+Route::get('/pembelian', function () {
     return view('admin.pembelian');
 	});
 
-Route::get('penjualan', 'BarangController@penjualan');
-Route::get('pembelian', 'BarangController@pembelian');
-Route::post('barang_masuk', 'BarangController@barang_masuk');
+Route::get('/penjualan', function () {
+    return view('admin.penjualan');
+	});
+
+Route::post('penjualan_save', 'PenjualanController@penjualan');
+Route::post('pembelian_save', 'PembelianController@pembelian');
+Route::get('detail_pembelian', 'BarangController@detail_pembelian');
+Route::get('detail_penjualan', 'BarangController@detail_penjualan');

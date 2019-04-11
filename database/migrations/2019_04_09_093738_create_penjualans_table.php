@@ -15,10 +15,9 @@ class CreatePenjualansTable extends Migration
     {
         Schema::create('penjualans', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('NoFaktur')->unsigned();
-            $table->foreign('NoFaktur')->references('id')->on('penjualans');
+            $table->string('NoFaktur');
             $table->string('TglPenjualan');
-            $table->bigInteger('IDPetugas')->unsigned();
+            $table->string('IDPetugas');
             $table->string('Bayar');
             $table->string('Sisa');
             $table->string('Total');

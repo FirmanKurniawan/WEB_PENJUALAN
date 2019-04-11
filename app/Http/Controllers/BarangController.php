@@ -14,7 +14,8 @@ class BarangController extends Controller
     	$save->HargaNet = $r->input('HargaNet');
     	$save->HargaJual = $r->input('HargaJual');
     	$save->Stok = $r->input('Stok');
-    	$save->KodeBarang = str_random(5);
+        $kode = str_random(5);
+    	$save->KodeBarang = $kode;
     	$save->save();
 
     	return redirect()->back();
@@ -53,8 +54,17 @@ class BarangController extends Controller
         $barang->IDDistributor = $r->input('IDDistributor');
         $barang->Total = $r->input('Total');
         $barang->TglMasuk = "tes";
-        $barang->NoNota = rand(1, 100);
+        $nota = rand(1, 100);
+        $barang->NoNota = $nota;
+        
+
+        $detail = new \App\DetailBrgMasuk();
+        $detail->NoNota = $nota;
+        $detail->KodeBarang = "1";
+        $detail->Jumlah = "1";
+        $detail->Subtotal = "1";
         $barang->save();
+        $detail->save();
 
         return redirect()->back();
     }

@@ -15,8 +15,8 @@ class CreateDetailBrgMasuksTable extends Migration
     {
         Schema::create('detail_brg_masuks', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('NoNota')->unsigned();
-            $table->bigInteger('KodeBarang')->unsigned();
+            $table->bigInteger('NoNota');
+            $table->string('KodeBarang');
             $table->string('Jumlah');
             $table->string('Subtotal');
             $table->timestamps();

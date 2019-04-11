@@ -52,7 +52,7 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="/admin/tambah_barang"><i class="fa fa-circle-o"></i> Tambah Barang</a></li>
-            <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> Barang Masuk</a></li>
+            <li><a href="/admin/beli"><i class="fa fa-circle-o"></i> Barang Masuk</a></li>
             <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Detail Barang</a></li>
             <li><a href="/admin/tambah_jenis"><i class="fa fa-circle-o"></i> Jenis Barang</a></li>
           </ul>
@@ -60,18 +60,6 @@
         <li class="treeview">
           <a href="#">
             <i class="fa fa-table"></i> <span>Data Penjualan</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="pages/tables/simple.html"><i class="fa fa-circle-o"></i> Detail Penjualan</a></li>
-            <li><a href="pages/tables/data.html"><i class="fa fa-circle-o"></i> Data tables</a></li>
-          </ul>
-        </li>
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-table"></i> <span>Data Pembelian</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>

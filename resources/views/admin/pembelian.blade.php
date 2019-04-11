@@ -2,55 +2,14 @@
 @section('isi')
 
 <div class="col-md-12">
-  <div class="box box-info">
-    <div class="box-header with-border">
-      <h3 class="box-title">Barang Masuk</h3>
-      <table class="table table-bordered">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Nota</th>
-            <th scope="col">Tanggal Masuk</th>
-            <th scope="col">ID Distributor</th>
-            <th scope="col">ID Petugas</th>
-            <th scope="col">Total</th>
-            <th colspan="2">Action</th>
-          </tr>
-        </thead>
-        @php
-          $barang = \App\BrgMasuk::all();
-          $i = 1;
-        @endphp
-        @foreach($barang as $b)
-        @php
-          $id_jenis = \App\Jenis::where('id', $b->KodeJenis)->value('Jenis');
-        @endphp
-        <tbody>
-          <tr>
-            <th scope="row">{{$i++}}</th>
-            <td>{{$b->NoNota}}</td>
-            <td>{{$b->TglMasuk}}</td>
-            <td>{{$b->IDDistributor}}</td>
-            <td>{{$b->IDPetugas}}</td>
-            <td>{{$b->Total}}</td>
-            <td><a href="delete_admin/{{$b->id}}">Hapus</a></td>
-          </tr>
-        </tbody>
-        @endforeach
-      </table>
-    </div>
-  </div>
-</div>
-
-<div class="col-md-12">
           <!-- Horizontal Form -->
           <div class="box box-info">
             <div class="box-header with-border">
-              <h3 class="box-title">Barang Masuk</h3>
+              <h3 class="box-title">Beli Barang</h3>
             </div>
             <!-- /.box-header -->
             <!-- form start -->
-            <form class="form-horizontal" method="POST" action="barang_masuk">
+            <form class="form-horizontal" method="POST" action="pembelian_save">
               @csrf
               <div class="box-body">
                 <div class="form-group">
@@ -58,6 +17,7 @@
                   <div class="col-sm-10">
                     <select class="form-control" name="IDPetugas">
                       @php
+                        $barang = \App\Barang::all();
                         $id_petugas = \App\Petugas::all();
                         $id_distributor = \App\Distributor::all();
                       @endphp
@@ -79,10 +39,27 @@
                   </div>
                 </div>
                 <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label">Nama Barang</label>
+
+                  <div class="col-sm-10">
+                    <select class="form-control" name="IDDistributor">
+                      @foreach($barang as $b)
+                      <option value="{{$id_d->IDDistributor}}">{{$b->NamaBarang}} - Harga Net : Rp. {{$b->HargaNet}} - Harga Jual : Rp. {{$b->HargaJual}} - Stok : {{$b->Stok}}</option>
+                      @php
+                        $data = \App\Barang::where('id', $b->id)->first();
+                      @endphp
+                      @endforeach
+                    </select>
+                  </div>
+                      <input type="hidden" name="HargaNet" value="{{$data->HargaNet}}">
+                      <input type="hidden" name="HargaJual" value="{{$data->HargaJual}}">
+                      <input type="hidden" name="KodeBarang" value="{{$data->KodeBarang}}">
+                </div>
+                <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label">Total</label>
 
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputEmail3" placeholder="Total" name="Total">
+                    <input type="number" class="form-control" id="inputEmail3" placeholder="Total" name="Total">
                   </div>
                 </div>
               </div>
