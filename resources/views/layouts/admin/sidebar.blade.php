@@ -52,6 +52,8 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="/admin/tambah_barang"><i class="fa fa-circle-o"></i> Tambah Barang</a></li>
+            <li><a href="/admin/beli"><i class="fa fa-circle-o"></i> Beli Barang</a></li>
+            <li><a href="/admin/jual"><i class="fa fa-circle-o"></i> Jual Barang</a></li>
             <li><a href="/admin/beli"><i class="fa fa-circle-o"></i> Barang Masuk</a></li>
             <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Detail Barang</a></li>
             <li><a href="/admin/tambah_jenis"><i class="fa fa-circle-o"></i> Jenis Barang</a></li>
