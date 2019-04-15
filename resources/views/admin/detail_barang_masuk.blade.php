@@ -28,8 +28,10 @@
         <tbody>
           <tr>
             <th scope="row">{{$i++}}</th>
-            <td>{{$b->name}}</td>
-            <td>{{$b->email}}</td>
+            <td>{{$b->NoNota}}</td>
+            <td>{{$b->KodeBarang}}</td>
+            <td>{{$b->Jumlah}}</td>
+            <td>{{$b->Subtotal}}</td>
             <td><a href="delete_admin/{{$b->id}}">Hapus</a></td>
           </tr>
         </tbody>

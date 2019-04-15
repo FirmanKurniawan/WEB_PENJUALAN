@@ -68,4 +68,9 @@ class BarangController extends Controller
 
         return redirect()->back();
     }
+
+    public function detail_penjualan()
+    {
+        
+    }
 }

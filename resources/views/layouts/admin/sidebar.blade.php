@@ -54,8 +54,8 @@
             <li><a href="/admin/tambah_barang"><i class="fa fa-circle-o"></i> Tambah Barang</a></li>
             <li><a href="/admin/beli"><i class="fa fa-circle-o"></i> Beli Barang</a></li>
             <li><a href="/admin/jual"><i class="fa fa-circle-o"></i> Jual Barang</a></li>
-            <li><a href="/admin/beli"><i class="fa fa-circle-o"></i> Barang Masuk</a></li>
-            <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Detail Barang</a></li>
+            <li><a href="/admin/barang_masuk"><i class="fa fa-circle-o"></i> Barang Masuk</a></li>
+            <li><a href="/admin/detail_barang_masuk"><i class="fa fa-circle-o"></i> Detail Barang Masuk</a></li>
             <li><a href="/admin/tambah_jenis"><i class="fa fa-circle-o"></i> Jenis Barang</a></li>
           </ul>
         </li>
@@ -67,8 +67,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/tables/simple.html"><i class="fa fa-circle-o"></i> Detail Penjualan</a></li>
-            <li><a href="pages/tables/data.html"><i class="fa fa-circle-o"></i> Data tables</a></li>
+            <li><a href="/admin/penjualan"><i class="fa fa-circle-o"></i> Penjualan</a></li>
+            <li><a href="/admin/detail_penjualan"><i class="fa fa-circle-o"></i> Detail Penjualan</a></li>
           </ul>
         </li>
         <li><a href="https://adminlte.io/docs"><i class="fa fa-book"></i> <span>Documentation</span></a></li>

@@ -60,6 +60,23 @@ Route::group(['middleware' => 'admin'], function(){
     return view('admin.penjualan');
 	});
 
+	Route::get('/detail_penjualan', function () {
+    return view('admin.detail_penjualan');
+	});
+
+	Route::get('/penjualan', function () {
+    return view('admin.penjualan');
+	});
+
+	Route::get('/barang_masuk', function () {
+    return view('admin.barang_masuk');
+	});
+
+	Route::get('/detail_barang_masuk', function () {
+    return view('admin.detail_barang_masuk');
+	});
+
+
 	Route::post('save_barang', 'BarangController@save_barang');
 	Route::post('save_jenis', 'BarangController@save_jenis');
 	Route::post('save_petugas', 'PenggunaController@save_petugas');
@@ -75,6 +92,7 @@ Route::group(['middleware' => 'admin'], function(){
 	Route::post('barang_masuk', 'BarangController@barang_masuk');
 	Route::post('pembelian_save', 'PembelianController@pembelian');
 	Route::post('penjualan_save', 'PenjualanController@penjualan');
+	Route::get('detail_penjualan1', 'BarangController@detail_penjualan');
 });
 });
 
@@ -94,4 +112,3 @@ Route::get('/penjualan', function () {
 	});
 
 Route::get('detail_pembelian', 'BarangController@detail_pembelian');
-Route::get('detail_penjualan', 'BarangController@detail_penjualan');
