@@ -1,4 +1,7 @@
-@extends('admin.index')
+@extends('layouts.admin.index')
+@section('title')
+Detail Barang Masuk
+@endsection
 @section('isi')
 
 <div class="col-md-12">

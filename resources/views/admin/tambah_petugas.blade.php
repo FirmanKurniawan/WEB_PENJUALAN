@@ -1,4 +1,7 @@
-@extends('admin.index')
+@extends('layouts.admin.index')
+@section('title')
+Tambah Petugas
+@endsection
 @section('isi')
 
 <div class="col-md-12">
@@ -33,7 +36,7 @@
             <td>{{$b->Alamat}}</td>
             <td>{{$b->Email}}</td>
             <td>{{$b->Telepon}}</td>
-            <td><a href="delete_petugas/{{$b->id}}">Hapus</a></td>
+            <td><a href="delete_petugas/{{$b->id}}" onclick="return confirm('Are you sure you want to delete this item?');">Hapus</a></td>
           </tr>
         </tbody>
         @endforeach

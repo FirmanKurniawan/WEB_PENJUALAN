@@ -1,4 +1,7 @@
-@extends('admin.index')
+@extends('layouts.admin.index')
+@section('title')
+Tambah Jenis
+@endsection
 @section('isi')
 <div class="col-md-12">
   <div class="box box-info">
@@ -26,7 +29,7 @@
             <th scope="row">{{$i++}}</th>
             <td>{{$b->KodeJenis}}</td>
             <td>{{$b->Jenis}}</td>
-            <td><a href="delete_jenis/{{$b->id}}">Hapus</a></td>
+            <td><a href="delete_jenis/{{$b->id}}" onclick="return confirm('Are you sure you want to delete this item?');">Hapus</a></td>
           </tr>
         </tbody>
         @endforeach

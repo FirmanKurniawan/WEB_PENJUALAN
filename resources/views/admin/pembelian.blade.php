@@ -1,4 +1,7 @@
-@extends('admin.index')
+@extends('layouts.admin.index')
+@section('title')
+Pembelian
+@endsection
 @section('isi')
 
 <div class="col-md-12">
